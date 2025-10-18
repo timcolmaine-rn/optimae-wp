@@ -1,1 +1,1 @@
-# optimae-wp
+# optimae static site
