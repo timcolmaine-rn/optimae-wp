@@ -49,7 +49,7 @@
         }
 
         .logo img {
-            height: 30px;
+            height: 25px;
             width: auto;
         }
 
@@ -73,109 +73,16 @@
                 opacity: 0.8;
             }
 
-        /* Panel Section */
-        .panel{
-            width: 85%;
-            justify-self:center;
-        }
-
-        .panel-head {
-            font-size: 40px;
-            width: 65%;
-            font-weight: 800;
-            line-height:110%;
-            margin-bottom: 10px;
-        }
-                .panel-head p{
-            background: -webkit-linear-gradient(orangered, #d5b422);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-.box {
-  border: 2px dotted rgb(96 139 168);
-  display:flexbox;
-  justify-content:center ;
-}
-
-.box > * {
-  border: 2px solid rgb(96 139 168);
-  border-radius: 5px;
-  background-color: rgb(96 139 168 / 0.2);
-  padding: 1em;
-}
-
-        /* Panel1 Section */
-        .panel1 {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr 1fr;
-            gap: 0px 0px;
-            width: 85%;
-            grid-auto-flow: row;
-            grid-template-areas:
-                "panel1-head"
-                "panel1-content"
-                "pane1-footer";
-        }
-
-        .panel1-head {
-            grid-area: panel1-head;
-            font-size: 40px;
-            color: orangered;
-            width: 65%;
-            font-weight: 800;
-            line-height:110%;
-            margin-bottom: 10px;
-        }
-
-        .panel1-head p{
-            background: -webkit-linear-gradient(orangered, #d5b422);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .panel1-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr;
-            gap: 0px 0px;
-            grid-auto-flow: row;
-            grid-template-areas:
-                "panel1-content-left panel1-content-right";
-            grid-area: panel1-content;
-        }
-
-        .panel1-content-left {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr;
-            gap: 0px 0px;
-            grid-auto-flow: row;
-            grid-template-areas:
-                "."
-                ".";
-            grid-area: panel1-content-left;
-        }
-
-        .panel1-content-right {
-            grid-area: panel1-content-right;
-        }
-
-        .pane1-footer {
-            grid-area: pane1-footer;
-        }
-
-
-
+            
         /* Hero Section */
         .hero-section {
-            background: linear-gradient(rgba(33, 42, 49, 0.6), rgba(33, 42, 49, 0.6)), url('images/hero-image.jpg');
-            background-size: cover;
+           background: linear-gradient(rgba(33, 42, 49, 0.6), rgba(33, 42, 49, 0.6)), url('images/home-banner-2025.png');
+            background-repeat: no-repeat;
+            background-size: cover; 
             background-position: center;
-            padding: 150px 30px;
+            padding: 50px 30px;
             text-align: center;
-            min-height: 400px;
+            min-height: 300px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -185,19 +92,65 @@
             max-width: 800px;
         }
 
-            .hero-content h2 {
-                font-size: 40.5px;
-                color: #ffffff;
-                font-weight: 400;
-                margin-bottom: 15px;
-                line-height: 1.125;
-            }
+        .hero-content h1 {
+            background: -webkit-linear-gradient(orangered, #d5b422);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 60px;
+        }
+
+        .hero-content h2 {
+            font-size: 40.5px;
+            color: #ffffff;
+            font-weight: 400;
+            margin-bottom: 15px;
+            line-height: 1.125;
+        }
 
         .hero-tagline {
             font-size: 22px;
             color: #ffffff;
             font-weight: 300;
         }
+
+            
+        /* Panel Section */
+        .panel{
+            width: 90%;
+            justify-self:center;
+            margin-bottom: 250px;
+        }
+
+        .panel-head {
+            font-size: 40px;
+            width: 65%;
+            font-weight: 800;
+            line-height:110%;
+            margin-bottom: 30px;
+            margin-top: 30px;
+        }
+        .panel-head p{
+            background: -webkit-linear-gradient(orangered, #d5b422);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .panel-container
+        {
+              display: flex;
+        }
+
+        .panel-container .box1, .box2 {
+        flex: 1;
+        padding: 0px;
+        margin-left:5px;
+        color:white;
+        }
+
+        .panel-footer {
+            margin-top: 20px;
+        }
+
+
 
         /* Intro Section */
         .intro-section {
@@ -390,35 +343,42 @@
     <!-- Main Content -->
     <main class="container">
 
+        <!--
         <h1>Header 1</h1>
         <h2>Header 1</h2>
         <h3>Header 1</h3>
         <h4>Header 1</h4>
         <p>Some paragraph text</p>
+        -->
+
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1>Power your legal practice from the cloud</h1>   
+                <p>Leverage technology to streamline your workflow and enhance client services.</p>
+            </div>
+        </div>
 
 <div class="panel">
-    <div class="panel-head"><p>Header</p></div>
-    <div class="box">
-        <div>Going forward, we should actualize the key action. Harness the asset and markets. Going forward, we should leverage the key action. Harness vertical markets to achieve optimal targets. Actualize the plan and markets. Going forward, we should harness the key action. Leverage skillsets to achieve maximum market share. Going forward, we should actualize the asset. Leverage markets to achieve the best targets. Harness the plan and vertical markets.</div>
-        <div>Actualize the key action and vertical markets. Going forward, we should harness the asset. Actualize skillsets to achieve the best targets. Leverage the key action and markets. Actualize skillsets to achieve maximum goals. Leverage the plan and markets. Going forward, we should harness the key action.</div>
+    <div class="panel-head">                   
+        <div style="color: #ffffff;"> Power your legal practice</div>
+        <p> from the cloud</p></div>
+    <div class="panel-container">
+        <div class="box1">Going forward, we should actualize the key action. Harness the asset and markets. Going forward, we should leverage the key action. Harness vertical markets to achieve optimal targets. Actualize the plan and markets. Going forward, we should harness the key action. Leverage skillsets to achieve maximum market share. Going forward, we should actualize the asset. Leverage markets to achieve the best targets. Harness the plan and vertical markets.</div>
+        <div class="box2">Actualize the key action and vertical markets. Going forward, we should harness the asset. Actualize skillsets to achieve the best targets. Leverage the key action and markets. Actualize skillsets to achieve maximum goals. Leverage the plan and markets. Going forward, we should harness the key action.</div>
     </div>
-    <div>Footer</div>
+    
 </div>
 
-
-            <div class="panel1">
-                <div class="panel1-head">
-                   <div style="color: #ffffff;"> Power your legal practice</div>
-                   <p> from the cloud</p>
-                </div>
-<!--
-                                <div class="panel1-content">
-                    <div class="panel1-content-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vestibulum massa a pretium lobortis. Sed in eleifend diam. Mauris eu ipsum eu ante fermentum cursus. Praesent gravida cursus tellus vitae convallis. Donec iaculis ex eu accumsan euismod. Sed posuere eu tortor vel ultricies. Vestibulum sem mauris, rhoncus et mi ac, pretium lobortis sem.</div>
-                    <div class="panel1-content-right">Right Text</div>
-                </div>
-                <div class="pane1-footer">Footer Text</div>
--->
-            </div>
+<div class="panel">
+    <div class="panel-head">                   
+        <div style="color: #ffffff;"> Power your legal practice</div>
+        <p> from the cloud</p></div>
+    <div class="panel-container">
+        <div class="box1">Going forward, we should actualize the key action. Harness the asset and markets. Going forward, we should leverage the key action. Harness vertical markets to achieve optimal targets. Actualize the plan and markets. Going forward, we should harness the key action. Leverage skillsets to achieve maximum market share. Going forward, we should actualize the asset. Leverage markets to achieve the best targets. Harness the plan and vertical markets.</div>
+        <div class="box2">Actualize the key action and vertical markets. Going forward, we should harness the asset. Actualize skillsets to achieve the best targets. Leverage the key action and markets. Actualize skillsets to achieve maximum goals. Leverage the plan and markets. Going forward, we should harness the key action.</div>
+    </div>
+    <div class="panel-footer">Footer</div>
+</div>
 
 
     </main>
