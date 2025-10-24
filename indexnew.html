@@ -76,11 +76,11 @@
             
         /* Hero Section */
         .hero-section {
-           background: linear-gradient(rgba(33, 42, 49, 0.6), rgba(33, 42, 49, 0.6)), url('images/home-banner-2025.png');
+         /*  background: linear-gradient(rgba(33, 42, 49, 0.6), rgba(33, 42, 49, 0.6)), url('images/home-banner-2025.png'); */
             background-repeat: no-repeat;
             background-size: cover; 
             background-position: center;
-            padding: 50px 30px;
+            padding: 150px 30px;
             text-align: center;
             min-height: 300px;
             display: flex;
@@ -114,43 +114,112 @@
         }
 
             
-        /* Panel Section */
-        .panel{
-            width: 90%;
+        /* Panel Sections */
+
+
+
+
+
+        .panel-section {
+            position: relative;
+            width: 95%;
             justify-self:center;
-            margin-bottom: 250px;
+            /* margin-bottom: 20px; */
+            padding-bottom: 150px;
+            border-left: #d58722 2px solid;
+            padding-left: 15px;
         }
 
-        .panel-head {
+        .panel-section::before {
+            content: '';
+            position: absolute;
+            top: 30px;
+            left: -10px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #d58722;
+            z-index: 10;
+        }
+
+        .panel-twocol-head {
             font-size: 40px;
             width: 65%;
             font-weight: 800;
             line-height:110%;
-            margin-bottom: 30px;
-            margin-top: 30px;
+            padding-bottom: 30px;
+            padding-top: 30px;
+            padding-left: 15px;
+
         }
-        .panel-head p{
+        .panel-twocol-head p{
             background: -webkit-linear-gradient(orangered, #d5b422);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .panel-container
+        .panel-twocol-container
         {
               display: flex;
         }
 
-        .panel-container .box1, .box2 {
+        .panel-twocol-container .twocol-box1, .twocol-box2 {
         flex: 1;
-        padding: 0px;
+        padding: 15px;
         margin-left:5px;
         color:white;
+        font-size: 16px;
+
         }
+
+        .panel-sidebyside-container
+        {
+              display: flex;
+        }
+
+        .panel-sidebyside-container .sbs-col-box1 {
+        font-size: 40px;
+            width: 40%;
+            font-weight: 800;
+            line-height:110%;
+            padding-bottom: 30px;
+            padding-top: 30px;
+            padding-left: 15px;
+
+        }
+
+        .panel-sidebyside-container .sbs-col-box1 p {
+                        background: -webkit-linear-gradient(orangered, #d5b422);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .panel-sidebyside-container .sbs-col-box2 {
+        flex: 1;
+        padding: 15px;
+        margin-left:5px;
+        color:white;
+        font-size: 16px;
+
+        }
+
+
 
         .panel-footer {
             margin-top: 20px;
         }
 
+       .panel-image-container
+        {
+              display: flex;
+        }
 
+        .panel-image-container .box1, .box2 {
+        flex: 1;
+        padding: 15px;
+        margin-left:5px;
+        color:white;
+        font-size: 16px;
+        }
 
         /* Intro Section */
         .intro-section {
@@ -343,13 +412,6 @@
     <!-- Main Content -->
     <main class="container">
 
-        <!--
-        <h1>Header 1</h1>
-        <h2>Header 1</h2>
-        <h3>Header 1</h3>
-        <h4>Header 1</h4>
-        <p>Some paragraph text</p>
-        -->
 
         <div class="hero-section">
             <div class="hero-content">
@@ -358,28 +420,50 @@
             </div>
         </div>
 
-<div class="panel">
-    <div class="panel-head">                   
-        <div style="color: #ffffff;"> Power your legal practice</div>
-        <p> from the cloud</p></div>
-    <div class="panel-container">
-        <div class="box1">Going forward, we should actualize the key action. Harness the asset and markets. Going forward, we should leverage the key action. Harness vertical markets to achieve optimal targets. Actualize the plan and markets. Going forward, we should harness the key action. Leverage skillsets to achieve maximum market share. Going forward, we should actualize the asset. Leverage markets to achieve the best targets. Harness the plan and vertical markets.</div>
-        <div class="box2">Actualize the key action and vertical markets. Going forward, we should harness the asset. Actualize skillsets to achieve the best targets. Leverage the key action and markets. Actualize skillsets to achieve maximum goals. Leverage the plan and markets. Going forward, we should harness the key action.</div>
-    </div>
-    
-</div>
+        <!-- <div class="container-content"> -->
+        <!--
+        <h1>Header 1</h1>
+        <h2>Header 1</h2>
+        <h3>Header 1</h3>
+        <h4>Header 1</h4>
+        <p>Some paragraph text</p>
 
-<div class="panel">
-    <div class="panel-head">                   
-        <div style="color: #ffffff;"> Power your legal practice</div>
-        <p> from the cloud</p></div>
-    <div class="panel-container">
-        <div class="box1">Going forward, we should actualize the key action. Harness the asset and markets. Going forward, we should leverage the key action. Harness vertical markets to achieve optimal targets. Actualize the plan and markets. Going forward, we should harness the key action. Leverage skillsets to achieve maximum market share. Going forward, we should actualize the asset. Leverage markets to achieve the best targets. Harness the plan and vertical markets.</div>
-        <div class="box2">Actualize the key action and vertical markets. Going forward, we should harness the asset. Actualize skillsets to achieve the best targets. Leverage the key action and markets. Actualize skillsets to achieve maximum goals. Leverage the plan and markets. Going forward, we should harness the key action.</div>
-    </div>
-    <div class="panel-footer">Footer</div>
-</div>
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="absolute -left-3 rounded-3xl text-2xl p-1  text-white bg-gradient-to-tr from-[#ED5432] to-[#EDA232] drop-shadow-[0_0_4px_#ED5432]" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M480 224h-99.8c-14.2-55.2-64.2-96-123.7-96S147 168.8 132.8 224H32v64h100.8c14.2 55.2 64.2 96 123.7 96s109.5-40.8 123.7-96H480v-64zM256.5 336c-44 0-79.8-35.9-79.8-80s35.8-80 79.8-80 79.8 35.9 79.8 80-35.8 80-79.8 80z"></path></svg>
+        -->
 
+
+<div >
+
+    <div class="panel-section">
+            <div class="panel-twocol-head">                   
+                <div style="color: #ffffff;"> Power your legal practice</div>
+                <p> from the cloud</p></div>
+            <div class="panel-twocol-container">
+                <div class="twocol-box1">Going forward, we should actualize the key action. Harness the asset and markets. Going forward, we should leverage the key action. Harness vertical markets to achieve optimal targets. Actualize the plan and markets. Going forward, we should harness the key action. Leverage skillsets to achieve maximum market share. </div>
+                <div class="twocol-box2">Actualize the key action and vertical markets. Going forward, we should harness the asset. Actualize skillsets to achieve the best targets. Leverage the key action and markets. Actualize skillsets to achieve maximum goals. Leverage the plan and markets. Going forward, we should harness the key action.</div>
+            </div>            
+        </div>
+
+
+    <div class="panel-section">
+            <div class="panel-twocol-head">                   
+                <div style="color: #ffffff;"> Power your legal practice</div>
+                <p> from the cloud</p></div>
+            <div class="panel-twocol-container">
+                <div class="twocol-box1">Going forward, we should actualize the key action. Harness the asset and markets. Going forward, we should leverage the key action. Harness vertical markets to achieve optimal targets. Actualize the plan and markets. Going forward, we should harness the key action. Leverage skillsets to achieve maximum market share. </div>
+                <div class="twocol-box2">Actualize the key action and vertical markets. Going forward, we should harness the asset. Actualize skillsets to achieve the best targets. Leverage the key action and markets. Actualize skillsets to achieve maximum goals. Leverage the plan and markets. Going forward, we should harness the key action.</div>
+            </div>            
+        </div>
+
+    <div class="panel-section">
+                  <div class="panel-sidebyside-container">
+                <div class="sbs-col-box1">Main tagline<p>Title text with something to say</p></div>
+                <div class="sbs-col-box2">Actualize the key action and vertical markets. Going forward, we should harness the asset. Actualize skillsets to achieve the best targets. Leverage the key action and markets. Actualize skillsets to achieve maximum goals. Leverage the plan and markets. Going forward, we should harness the key action.</div>
+            </div>  
+    </div>
+
+
+</div>
 
     </main>
 
