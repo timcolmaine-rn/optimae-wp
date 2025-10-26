@@ -20,6 +20,9 @@
             font-size: 19.8px;
             line-height: 1.4;
             background-color: #212A31;
+             background-image: url(images/hero5.png) ; 
+            background-repeat: no-repeat;
+            background-size: cover;
             color: #ffffff;
             font-weight: 300;
         }
@@ -93,14 +96,14 @@
         }
 
         .hero-content h1 {
-            background: -webkit-linear-gradient(orangered, #d5b422);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-size: 60px;
+            font-weight: 600;
+            font-size: 50px;
+            color: #ffffff;
+           /* margin-bottom: 15px; */
         }
 
         .hero-content h2 {
-            font-size: 40.5px;
+            font-size: 30px;
             color: #ffffff;
             font-weight: 400;
             margin-bottom: 15px;
@@ -108,6 +111,11 @@
         }
 
         .hero-tagline {
+
+            background: -webkit-linear-gradient(orangered, #d5b422);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;            
+
             font-size: 22px;
             color: #ffffff;
             font-weight: 300;
@@ -125,7 +133,7 @@
             width: 95%;
             justify-self:center;
             /* margin-bottom: 20px; */
-            padding-bottom: 150px;
+            padding-bottom: 100px;
             border-left: #d58722 2px solid;
             padding-left: 15px;
         }
@@ -133,8 +141,8 @@
         .panel-section::before {
             content: '';
             position: absolute;
-            top: 30px;
-            left: -10px;
+            top: 0px;
+            left: -11px;
             width: 20px;
             height: 20px;
             border-radius: 50%;
@@ -171,6 +179,8 @@
 
         }
 
+        .twocol-box1 p {margin-bottom: 15px;}
+
         .panel-sidebyside-container
         {
               display: flex;
@@ -178,7 +188,7 @@
 
         .panel-sidebyside-container .sbs-col-box1 {
         font-size: 40px;
-            width: 40%;
+            width: 50%;
             font-weight: 800;
             line-height:110%;
             padding-bottom: 30px;
@@ -188,9 +198,10 @@
         }
 
         .panel-sidebyside-container .sbs-col-box1 p {
-                        background: -webkit-linear-gradient(orangered, #d5b422);
+            background: -webkit-linear-gradient(orangered, #d5b422);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
         }
 
         .panel-sidebyside-container .sbs-col-box2 {
@@ -200,10 +211,11 @@
         margin-left:5px;
         color:white;
         font-size: 16px;
-
         }
 
-
+        .panel-sidebyside-container .sbs-col-box2 p {
+            margin-bottom: 15px;
+        }
 
         .panel-footer {
             margin-top: 20px;
@@ -386,6 +398,33 @@
                 gap: 15px;
             }
         }
+
+
+svg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear alternate infinite;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 822;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
     </style>
 </head>
 <body>
@@ -409,16 +448,33 @@
             </nav>
         </div>
     </header>
+<!--
+<svg viewBox="0 0 340 333"> 
 
+  <path class="path" fill="white" stroke="black" stroke-width="4" d="M66.039,133.545c0,0-21-57,18-67s49-4,65,8
+  s30,41,53,27s66,4,58,32s-5,44,18,57s22,46,0,45s-54-40-68-16s-40,88-83,48s11-61-11-80s-79-7-70-41
+  C46.039,146.545,53.039,128.545,66.039,133.545z"/>
+  
+</svg>
+-->
     <!-- Main Content -->
     <main class="container">
-
-
         <div class="hero-section">
             <div class="hero-content">
-                <h1>Power your legal practice from the cloud</h1>   
-                <p>Leverage technology to streamline your workflow and enhance client services.</p>
-            </div>
+
+                <div style="display: flex;align-items: center;">
+                    <div style="padding-right: 20px;">
+                        <img src="documents/logo-vector-30.png" width="40px" height="40px"/>
+                    </div>
+                    <div style="flex-grow: 1; text-align: left; ;">
+                        <h1>Optimae Consulting</h1>
+                    </div>
+                </div>
+                <div><h2>Legal Technology Specialists</h2></div>
+               <div class="hero-tagline">Independent guidance. Expert delivery. Long-term value.</div>
+
+                <!-- <h1>Optimae Consulting</h1>  --> 
+             </div>
         </div>
 
         <!-- <div class="container-content"> -->
@@ -436,12 +492,31 @@
 <div >
 
     <div class="panel-section">
+                <div class="panel-sidebyside-container">
+                <div class="sbs-col-box1">
+                Expertise-Driven
+                <p>Strategic implementation</p>
+                <p>Seamless integration</p>
+                <p>Measurable results</p>    
+
+                </div>
+                <div class="sbs-col-box2">
+                    <p>We help corporate law firms select, implement, and optimise practice management and finance platforms. From independent advisory through cloud migration and ongoing support—we deliver technology solutions that drive operational excellence.</p>
+                <p>With more than 15 years of expertise in legal technology, we guide corporate law firms through platform evaluation, implementation and optimisation. We give independent advice and proven delivery to create lasting partnerships with our clients.</p>
+                </div>
+            </div>  
+    </div>
+
+    <div class="panel-section">
             <div class="panel-twocol-head">                   
-                <div style="color: #ffffff;"> Power your legal practice</div>
-                <p> from the cloud</p></div>
+                <div style="color: #ffffff;">Ready to transform </div>  
+                <p>your legal technology?</p>       
+            </div>
             <div class="panel-twocol-container">
-                <div class="twocol-box1">Going forward, we should actualize the key action. Harness the asset and markets. Going forward, we should leverage the key action. Harness vertical markets to achieve optimal targets. Actualize the plan and markets. Going forward, we should harness the key action. Leverage skillsets to achieve maximum market share. </div>
-                <div class="twocol-box2">Actualize the key action and vertical markets. Going forward, we should harness the asset. Actualize skillsets to achieve the best targets. Leverage the key action and markets. Actualize skillsets to achieve maximum goals. Leverage the plan and markets. Going forward, we should harness the key action.</div>
+                <div class="twocol-box1">
+                <p>Whether you're evaluating platforms, planning an implementation, migrating to the cloud, or seeking to optimise existing systems, we're ready to help your firm achieve its technology objectives.</p>
+                <p>We help corporate law firms select, implement, and optimise practice management and finance platforms. From independent advisory through cloud migration and ongoing support—we deliver technology solutions that drive operational excellence.</p></div>
+                <div class="twocol-box2"></div>
             </div>            
         </div>
 
